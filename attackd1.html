@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"-->
+    <title>Document</title>
+    <!--link rel="stylesheet" href="attackd1.css"-->
+    <style>
+    :root
+{
+    --color-primary: hsl(0, 96%, 50%);
+    --color-white:white;
+    --color-black: #141d28;
+    --color-black-1: #212b38;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-family: sans-serif;
+}
+.logo
+{
+    color: var(--color-white);
+    font-size: 30px;
+}
+.logo span
+{
+    color: var(--color-primary);
+}
+.menu-bar
+{
+    background-color: var(--color-black);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;  
+    position: relative;
+}
+.menu-bar ul
+{
+    list-style: none;
+    display: flex;
+}
+.submit-btn
+{
+    width: 85%;
+    padding: 10px 30px;    
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: #F3C693;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+.menu-bar ul li
+{
+    padding: 10px 30px;  
+    position: relative;
+}
+.menu-bar ul li a
+{
+    font-size: 20px;
+    color: var(--color-white);
+    text-decoration: none;  
+    transition: all 0.3s;
+}
+.menu-bar ul li a:hover
+{
+    color: var(--color-primary);
+}
+.fas
+{
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+}
+  /* dropdown menu style */
+.dropdown-menu
+{
+    display: none;
+}
+.menu-bar ul li:hover .dropdown-menu
+{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: var(--color-black);
+}
+.menu-bar ul li:hover .dropdown-menu ul
+{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .dropdown-menu ul li
+{
+    width: 150px;
+    padding: 10px;
+}
+.dropdown-menu-1
+{
+    display: none;
+}
+.dropdown-menu ul li:hover .dropdown-menu-1 {
+    display: block;
+    position: absolute;
+    left: 150px;
+    top: 0;
+    background-color: var(--color-black);
+}
+.hero
+{
+    height: calc(100vh - 80px);
+    background-image: url(./bg.jpg);
+    background-position: center;
+}
+a
+{
+      text-decoration: none;
+      color: palevioletred;
+      font-size: 28px;
+}
+body
+{
+    font-family: "Roboto", sans-serif;
+    background: #ecf0f1;
+    color: #2c3e50;
+}
+h1
+{
+    margin: 25px 12px;
+    text-align: center;    
+    padding-left: 16px;
+}
+.container
+{
+    margin: 10ch;
+    padding: 10px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+.container h1{
+    margin-top: 45;
+    margin: 25px 25px;
+    text-align: center;    
+    padding-left: 16px;
+}
+.container .group
+{
+    padding: 8px 48px;
+    margin: 10px;
+    margin-left: 15px;
+}  
+.button{  
+    text-align: center;
+    width: 5cm;
+    margin-top:2%;
+    margin-left:40%;
+    
+}
+#btn{  
+    font-size: 25px;  
+}
+input[type="checkbox"] {
+    display: none;
+}
+label {
+    position: relative;
+}
+label::before {
+    content: "";
+    background: url(404-tick.png);
+    background-position: center;
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: -44px;
+    top: -8px;
+    transform: scale(0) rotateZ(180deg);
+    transition: all 0.4s cubic-bezier(0.54, 0.01, 0, 1.49);
+}
+input[type="checkbox"]:checked + label::before {
+    transform: scale(1) rotateZ(0deg);
+}
+label::after {
+    content: "";
+    border: 2px solid #27ae60;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: -42px;
+    top: -6px;
+    border-radius: 50%;
+}
+.b{
+	font-size:80px;
+}
+</style>
+</head>
+<body>
+    <!--script type="text/javascript">
+        function Form(){
+            var selectvalue= $('input[name=link]:checked','#Form').val();
+            if(selectvalue=="OS Credential Dumping: Security Account Manager"){
+                window.location.href="OSCredentialDumping.php";
+                return true
+            }
+            if(selectvalue=="Process Injection: Dynamic-link Library Injection"){
+                window.location.href="ProcessInjection.php";    
+                return true
+            }
+            if(selectvalue=="Modify Authentication Process: Password Filter DLL"){
+                window.location.href="ModifyAuthenticationProcess.php";
+                return true
+            }
+            if(selectvalue=="OS Credential Dumping: /etc/passwd and /etc/shadow"){
+                window.location.href="OSCredentialDumping1.php";
+                return true
+            }
+            if(selectvalue=="Masquerading: Rename System Utilities"){
+                window.location.href="Masquerading.php"
+                return true
+            }
+        return false;
+        }
+    </script-->
+
+    <div class="menu-bar">
+        <h1 class="logo">PURPLE <span>TEAMING</span></h1>
+        <ul>
+            <li><a href="profile.php">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="index.html">Logout<i class="fas fa-caret-down"></i></a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <form id="Form" method='POST' action='/link.php'>
+            <input type="checkbox" class='b' name="sam" value="OS Credential Dumping: Security Account Manager" id="OS Credential Dumping: Security Account Manager"/>
+            <label for="OS Credential Dumping: Security Account Manager">OS Credential Dumping: Security Account Manager</label>
+            <br>
+            <br>
+            <input type="checkbox" name="ca" class='b' value="Create Account: Local Account" id="Create Account: Local Account"/>
+            <label for="Create Account: Local Account">Create Account: Local Account</label>
+            <br>
+            <br>
+            <input type="checkbox" name="map" class='b' value="Modify Authentication Process: Pluggable Authentication Modules" id="Modify Authentication Process: Pluggable Authentication Modules"/>
+            <label for="Modify Authentication Process: Pluggable Authentication Modules">Modify Authentication Process: Pluggable Authentication Modules</label>
+            <br>
+            <br>
+            <input type="checkbox" name="etc" class='b' value="OS Credential Dumping: /etc/passwd and /etc/shadow" id="OS Credential Dumping: /etc/passwd and /etc/shadow"/>
+            <label for="OS Credential Dumping: /etc/passwd and /etc/shadow">OS Credential Dumping: /etc/passwd and /etc/shadow</label>
+            <br>
+            <br>
+            <input type="checkbox" name="mas" class='b' value="Masquerading: Rename System Utilities" id="Masquerading: Rename System Utilities"/>
+            <label for="Masquerading: Rename System Utilities">Masquerading: Rename System Utilities</label>
+            <br>
+            <br>
+    <button class="button" id="btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

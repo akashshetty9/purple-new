@@ -1,0 +1,4 @@
+sudo cat /etc/shadow > /tmp/T1003.008shadow.txt
+cat /tmp/T1003.008shadow.txt
+cat /etc/passwd > /tmp/T1003.008passwd.txt
+cat /tmp/T1003.008passwd.txt
